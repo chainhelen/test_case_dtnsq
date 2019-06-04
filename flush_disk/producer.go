@@ -17,7 +17,7 @@ func NewMQProducer() *dtnsq.Producer {
 func main() {
 	producer := NewMQProducer()
 
-	if err := producer.Publish("normal_topic", []byte("hello dtnsq one")); err != nil {
+	if err := producer.Publish("flush_topic", []byte("hello dtnsq one")); err != nil {
 		fmt.Printf("pre:%s\n", err.Error())
 	}
 }
